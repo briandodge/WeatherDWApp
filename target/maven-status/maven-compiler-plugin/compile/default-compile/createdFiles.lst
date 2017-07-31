@@ -1,0 +1,4 @@
+uk/gov/dvla/weatherapp/App.class
+uk/gov/dvla/weatherapp/resources/Weather.class
+uk/gov/dvla/weatherapp/representations/WeatherData.class
+uk/gov/dvla/weatherapp/WeatherConfig.class
