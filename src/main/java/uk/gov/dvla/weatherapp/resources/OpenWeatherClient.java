@@ -40,7 +40,7 @@ public class OpenWeatherClient {
 
         try {
             weatherData = mapper.readValue(response, WeatherData.class);
-            System.out.println(weatherData.getCoord().getLat());
+            System.out.println(weatherData.getVisibilty());
         } catch (IOException e) {
             e.printStackTrace();
         }
