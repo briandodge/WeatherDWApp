@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="dw-weather-app" />
         <module name="dwweatherapp" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="dw-weather-app" target="1.8" />
       <module name="dwweatherapp" target="1.8" />
     </bytecodeTargetLevel>
   </component>

@@ -60,8 +60,6 @@
             </plugin>
         </plugins>
     </build>
-
-
     <dependencies>
         <!-- https://mvnrepository.com/artifact/io.dropwizard/dropwizard-core -->
         <dependency>
@@ -75,6 +73,12 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
             <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.glassfish.jersey.core/jersey-client -->
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>2.25.1</version>
         </dependency>
 
     </dependencies>
