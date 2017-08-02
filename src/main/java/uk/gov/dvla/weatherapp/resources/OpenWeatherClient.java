@@ -45,7 +45,7 @@ public class OpenWeatherClient {
         try {
             App.LOGGER.info("JSON: " + response);
             weatherData = mapper.readValue(response, WeatherData.class);
-            System.out.println(weatherData.getVisibilty());
+            System.out.println(weatherData.getVisibility());
         } catch (IOException e) {
             e.printStackTrace();
         }

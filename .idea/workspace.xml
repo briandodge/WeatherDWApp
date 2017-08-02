@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c42f28d2-68aa-4572-b865-9fa1bbaaf72b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uk/gov/dvla/weatherapp/App.class" afterPath="$PROJECT_DIR$/target/classes/uk/gov/dvla/weatherapp/App.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uk/gov/dvla/weatherapp/representations/WeatherData$Clouds.class" afterPath="$PROJECT_DIR$/target/classes/uk/gov/dvla/weatherapp/representations/WeatherData$Clouds.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uk/gov/dvla/weatherapp/representations/WeatherData$Coord.class" afterPath="$PROJECT_DIR$/target/classes/uk/gov/dvla/weatherapp/representations/WeatherData$Coord.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uk/gov/dvla/weatherapp/representations/WeatherData$Main.class" afterPath="$PROJECT_DIR$/target/classes/uk/gov/dvla/weatherapp/representations/WeatherData$Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uk/gov/dvla/weatherapp/representations/WeatherData$Rain.class" afterPath="$PROJECT_DIR$/target/classes/uk/gov/dvla/weatherapp/representations/WeatherData$Rain.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uk/gov/dvla/weatherapp/representations/WeatherData$Snow.class" afterPath="$PROJECT_DIR$/target/classes/uk/gov/dvla/weatherapp/representations/WeatherData$Snow.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uk/gov/dvla/weatherapp/representations/WeatherData$Sys.class" afterPath="$PROJECT_DIR$/target/classes/uk/gov/dvla/weatherapp/representations/WeatherData$Sys.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uk/gov/dvla/weatherapp/representations/WeatherData$Weather.class" afterPath="$PROJECT_DIR$/target/classes/uk/gov/dvla/weatherapp/representations/WeatherData$Weather.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uk/gov/dvla/weatherapp/representations/WeatherData$Wind.class" afterPath="$PROJECT_DIR$/target/classes/uk/gov/dvla/weatherapp/representations/WeatherData$Wind.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uk/gov/dvla/weatherapp/representations/WeatherData.class" afterPath="$PROJECT_DIR$/target/classes/uk/gov/dvla/weatherapp/representations/WeatherData.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uk/gov/dvla/weatherapp/resources/OpenWeatherClient.class" afterPath="$PROJECT_DIR$/target/classes/uk/gov/dvla/weatherapp/resources/OpenWeatherClient.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/gov/dvla/weatherapp/App.java" afterPath="$PROJECT_DIR$/src/main/java/uk/gov/dvla/weatherapp/App.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/gov/dvla/weatherapp/representations/WeatherData.java" afterPath="$PROJECT_DIR$/src/main/java/uk/gov/dvla/weatherapp/representations/WeatherData.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/gov/dvla/weatherapp/resources/OpenWeatherClient.java" afterPath="$PROJECT_DIR$/src/main/java/uk/gov/dvla/weatherapp/resources/OpenWeatherClient.java" />
     </list>
@@ -54,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WeatherData.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WeatherData.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/uk/gov/dvla/weatherapp/representations/WeatherData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state relative-caret-position="-324">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -66,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Weather.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Weather.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/uk/gov/dvla/weatherapp/representations/Weather.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+            <state relative-caret-position="204">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -128,8 +118,8 @@
         <option value="$PROJECT_DIR$/src/main/java/uk/gov/dvla/weatherapp/resources/WeatherResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/gov/dvla/weatherapp/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/gov/dvla/weatherapp/resources/OpenWeatherClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/gov/dvla/weatherapp/representations/WeatherData.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/gov/dvla/weatherapp/representations/Weather.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/gov/dvla/weatherapp/representations/WeatherData.java" />
       </list>
     </option>
   </component>
@@ -584,21 +574,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/gov/dvla/weatherapp/representations/WeatherData.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/gov/dvla/weatherapp/representations/Weather.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/gov/dvla/weatherapp/representations/Weather.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/gov/dvla/weatherapp/representations/WeatherData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-          <folding />
+        <state relative-caret-position="-324">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

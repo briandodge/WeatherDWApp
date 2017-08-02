@@ -9,18 +9,10 @@ import java.util.ArrayList;
 public class WeatherData {
 
     private Coord coord;
-//    @JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
-//    private List<Weather> weather = new ArrayList<>();
-//    private Weather[] weather;
-
-    @JsonProperty("weather")
-    public ArrayList<Weather> weather = new ArrayList<>();
-
-
-
+    private ArrayList<Weather> weather;
     private String base;
     private Main main;
-    private float visibilty;
+    private float visibility;
     private Wind wind;
     private Clouds clouds;
     private Rain rain;
@@ -109,17 +101,10 @@ public class WeatherData {
 
     public WeatherData(){super();}
     public Coord getCoord() { return coord; }
-//    public List<Weather> getWeather() { return weather; }
-//    public Weather[] getWeather() { return weather; }
-
-
-//    public ArrayList<Weather> getWeather() {
-//        return weather;
-//    }
-
+    public ArrayList<Weather> getWeather() { return weather; }
     public String getBase() { return base; }
     public Main getMain() { return main; }
-    public float getVisibilty() { return visibilty; }
+    public float getVisibility() { return visibility; }
     public Wind getWind() { return wind; }
     public Clouds getClouds() { return clouds; }
     public Rain getRain() { return rain; }
