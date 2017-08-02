@@ -2,6 +2,7 @@ package uk.gov.dvla.weatherapp.resources;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.glassfish.jersey.client.ClientConfig;
+import uk.gov.dvla.weatherapp.App;
 import uk.gov.dvla.weatherapp.representations.WeatherData;
 
 import javax.ws.rs.client.Client;
@@ -42,6 +43,7 @@ public class OpenWeatherClient {
                 .queryParam("appid", this.apiKey)
                 .request().accept(MediaType.APPLICATION_JSON).get(String.class);
         try {
+            App.LOGGER.info("JSON: " + response);
             weatherData = mapper.readValue(response, WeatherData.class);
             System.out.println(weatherData.getVisibilty());
         } catch (IOException e) {

@@ -11,7 +11,7 @@ import uk.gov.dvla.weatherapp.resources.WeatherResource;
 
 public class App extends Application<WeatherConfig> {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+    public static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
     public static void main(String[] args) throws Exception {
         new App().run(args);

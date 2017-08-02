@@ -1,17 +1,23 @@
 package uk.gov.dvla.weatherapp.representations;
 
 
-import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class WeatherData {
 
     private Coord coord;
 //    @JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
 //    private List<Weather> weather = new ArrayList<>();
-    private Weather weather;
+//    private Weather[] weather;
+
+    @JsonProperty("weather")
+    public ArrayList<Weather> weather = new ArrayList<>();
+
+
+
     private String base;
     private Main main;
     private float visibilty;
@@ -29,19 +35,6 @@ public class WeatherData {
         public Coord(){}
         public float getLon() { return lon;  }
         public float getLat() { return lat;  }
-    }
-
-    public class Weather {
-        long id;
-        String main;
-        String description;
-        String icon;
-
-        public Weather(){ super(); }
-        public long getId() { return id; }
-        public String getMain() { return main; }
-        public String getDescription() { return description;  }
-        public String getIcon() { return icon; }
     }
 
     public class Main{
@@ -114,10 +107,16 @@ public class WeatherData {
     String name;
     float cod;
 
-    public WeatherData(){}
+    public WeatherData(){super();}
     public Coord getCoord() { return coord; }
 //    public List<Weather> getWeather() { return weather; }
-    public Weather getWeather() { return weather; }
+//    public Weather[] getWeather() { return weather; }
+
+
+//    public ArrayList<Weather> getWeather() {
+//        return weather;
+//    }
+
     public String getBase() { return base; }
     public Main getMain() { return main; }
     public float getVisibilty() { return visibilty; }
