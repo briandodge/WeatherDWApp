@@ -21,9 +21,9 @@ public class OpenWeatherClient {
     private final String location;
     private final String apiKey;
 
-    public OpenWeatherClient(String location, String apikey){
+    public OpenWeatherClient(String location, String apiKey){
         this.location = location;
-        this.apiKey = apikey;
+        this.apiKey = apiKey;
     }
 
     private WebTarget target;

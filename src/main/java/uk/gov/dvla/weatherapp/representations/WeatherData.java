@@ -1,8 +1,5 @@
 package uk.gov.dvla.weatherapp.representations;
 
-
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.util.ArrayList;
 
 
@@ -19,6 +16,9 @@ public class WeatherData {
     private Snow snow;
     private double dt;
     private Sys sys;
+    private int id;
+    private String name;
+    private float cod;
 
     public class Coord{
         float lon;
@@ -29,7 +29,7 @@ public class WeatherData {
         public float getLat() { return lat;  }
     }
 
-    public class Main{
+    private class Main{
         float temp;
         float pressure;
         float humidity;
@@ -48,7 +48,7 @@ public class WeatherData {
         public float getGrnd_level() { return grnd_level; }
     }
 
-    public class Wind{
+    private class Wind{
         float speed;
         float deg;
 
@@ -64,21 +64,21 @@ public class WeatherData {
         public float getAll() { return all; }
     }
 
-    public class Rain{
+    private class Rain{
         float _3h;
 
         public Rain(){}
         public float get_3h() { return _3h; }
     }
 
-    public class Snow{
+    private class Snow{
         float _3h;
 
         public Snow(){}
         public float get_3h() { return _3h; }
     }
 
-    public class Sys{
+    private class Sys{
         int type;
         int id;
         float message;
@@ -95,10 +95,6 @@ public class WeatherData {
         public double getSunset() { return sunset; }
     }
 
-    private int id;
-    String name;
-    float cod;
-
     public WeatherData(){super();}
     public Coord getCoord() { return coord; }
     public ArrayList<Weather> getWeather() { return weather; }
@@ -109,7 +105,7 @@ public class WeatherData {
     public Clouds getClouds() { return clouds; }
     public Rain getRain() { return rain; }
     public Snow getSnow() { return snow; }
-    public double getDt() { return dt; }
+    public double getDt() { return dt; }    // UTC Time (Seconds since 1/1/1970)
     public Sys getSys() { return sys; }
     public int getId() { return id; }
     public String getName() { return name; }

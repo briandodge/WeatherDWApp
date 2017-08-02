@@ -17,9 +17,7 @@ public class App extends Application<WeatherConfig> {
         new App().run(args);
     }
 
-    public void initialize(Bootstrap<WeatherConfig> b){
-
-    }
+    public void initialize(Bootstrap<WeatherConfig> b){     }
 
     @Override
     public void run(WeatherConfig config, Environment env) throws Exception {

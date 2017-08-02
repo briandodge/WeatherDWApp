@@ -2,7 +2,6 @@ package uk.gov.dvla.weatherapp.representations;
 
 public class Weather {
 
-
     private long id;
     private String main;
     private String description;
