@@ -3,19 +3,29 @@ package uk.gov.dvla.weatherapp.representations;
 
 public class WeatherData {
 
+    private Coord coord;
+    private Weather weather;
+    private String base;
+    private Main main;
+    private float visibilty;
+    private Wind wind;
+    private Clouds clouds;
+    private Rain rain;
+    private Snow snow;
+    private double dt;
+    private Sys sys;
+
     private class Coord{
         float lon;
         float late;
     }
 
-    private class Weather{
+    private class Weather {
         long id;
         String main;
         String description;
         String icon;
     }
-
-    private String base;
 
     private class Main{
         float temp;
@@ -23,22 +33,28 @@ public class WeatherData {
         float humidity;
         float temp_min;
         float temp_max;
+        float sea_level;
+        float grnd_level;
     }
-
-    private float visibilty;
 
     private class Wind{
         float speed;
         float deg;
     }
 
-    private class Cloads{
+    private class Clouds {
         float all;
     }
 
-    private double dt;
+    private class Rain{
+        float _3h;
+    }
 
-    private class sys{
+    private class Snow{
+        float _3h;
+    }
+
+    private class Sys{
         int type;
         int id;
         float message;
@@ -50,7 +66,5 @@ public class WeatherData {
     private int id;
     String name;
     float cod;
-
-
 
 }

@@ -9,6 +9,7 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.UriBuilder;
+import java.io.IOException;
 import java.net.URI;
 
 
@@ -18,10 +19,10 @@ public class OpenWeatherClient {
 
 
     private static URI getBaseURI(){
-        return UriBuilder.fromUri("api.openweathermap.org/data/2.5/").build();
+        return UriBuilder.fromUri("http://api.openweathermap.org/data/2.5/").build();
     }
 
-    public String getWeatherData(){
+    public WeatherData getWeatherData(){
         ClientConfig config = new ClientConfig();
         Client client = ClientBuilder.newClient(config);
         target = client.target(getBaseURI());
@@ -32,7 +33,14 @@ public class OpenWeatherClient {
                 .queryParam("appid", "04107284019355e819938452495e8879")
                 .request().accept(MediaType.APPLICATION_JSON).get(String.class);
 
-        return response;
+
+        try {
+            weatherData = mapper.readValue(response, WeatherData.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return weatherData;
     }
 
 

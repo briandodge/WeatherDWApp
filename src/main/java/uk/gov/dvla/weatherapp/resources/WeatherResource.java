@@ -1,6 +1,8 @@
 package uk.gov.dvla.weatherapp.resources;
 
 
+import uk.gov.dvla.weatherapp.representations.WeatherData;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
@@ -14,8 +16,8 @@ public class WeatherResource {
     public Response getWeather(){
 
         OpenWeatherClient client = new OpenWeatherClient();
-        String result = client.getWeatherData();
-        System.out.println(result);
+        WeatherData result = client.getWeatherData();
+
 
 
         return Response.ok().build();
