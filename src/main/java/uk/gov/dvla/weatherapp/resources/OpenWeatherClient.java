@@ -15,15 +15,20 @@ import java.net.URI;
 
 public class OpenWeatherClient {
 
+    private static final String OPEN_WEATHER_URI = "http://api.openweathermap.org/data/2.5/";
+    private static final String OPEN_WEATHER_ACTION = "weather";
+    private final String location;
+    private final String apiKey;
 
-
-
+    public OpenWeatherClient(String location, String apikey){
+        this.location = location;
+        this.apiKey = apikey;
+    }
 
     private WebTarget target;
 
-
     private static URI getBaseURI(){
-        return UriBuilder.fromUri("http://api.openweathermap.org/data/2.5/").build();
+        return UriBuilder.fromUri(OPEN_WEATHER_URI).build();
     }
 
     public WeatherData getWeatherData(){
@@ -33,18 +38,15 @@ public class OpenWeatherClient {
 
         WeatherData weatherData = null;
         ObjectMapper mapper = new ObjectMapper();
-        String response = target.path("weather").queryParam("q","london")
-                .queryParam("appid", "04107284019355e819938452495e8879")
+        String response = target.path(OPEN_WEATHER_ACTION).queryParam("q",this.location)
+                .queryParam("appid", this.apiKey)
                 .request().accept(MediaType.APPLICATION_JSON).get(String.class);
-
-
         try {
             weatherData = mapper.readValue(response, WeatherData.class);
             System.out.println(weatherData.getVisibilty());
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return weatherData;
     }
 

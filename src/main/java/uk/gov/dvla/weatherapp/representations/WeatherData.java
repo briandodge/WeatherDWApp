@@ -1,9 +1,16 @@
 package uk.gov.dvla.weatherapp.representations;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class WeatherData {
 
     private Coord coord;
+//    @JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
+//    private List<Weather> weather = new ArrayList<>();
     private Weather weather;
     private String base;
     private Main main;
@@ -20,14 +27,8 @@ public class WeatherData {
         float lat;
 
         public Coord(){}
-
-        public float getLon() {
-            return lon;
-        }
-
-        public float getLat() {
-            return lat;
-        }
+        public float getLon() { return lon;  }
+        public float getLat() { return lat;  }
     }
 
     public class Weather {
@@ -36,23 +37,11 @@ public class WeatherData {
         String description;
         String icon;
 
-        public Weather(){}
-
-        public long getId() {
-            return id;
-        }
-
-        public String getMain() {
-            return main;
-        }
-
-        public String getDescription() {
-            return description;
-        }
-
-        public String getIcon() {
-            return icon;
-        }
+        public Weather(){ super(); }
+        public long getId() { return id; }
+        public String getMain() { return main; }
+        public String getDescription() { return description;  }
+        public String getIcon() { return icon; }
     }
 
     public class Main{
@@ -65,35 +54,13 @@ public class WeatherData {
         float grnd_level;
 
         public Main(){}
-
-
-        public float getTemp() {
-            return temp;
-        }
-
-        public float getPressure() {
-            return pressure;
-        }
-
-        public float getHumidity() {
-            return humidity;
-        }
-
-        public float getTemp_min() {
-            return temp_min;
-        }
-
-        public float getTemp_max() {
-            return temp_max;
-        }
-
-        public float getSea_level() {
-            return sea_level;
-        }
-
-        public float getGrnd_level() {
-            return grnd_level;
-        }
+        public float getTemp() { return temp; }
+        public float getPressure() { return pressure; }
+        public float getHumidity() { return humidity; }
+        public float getTemp_min() { return temp_min; }
+        public float getTemp_max() { return temp_max; }
+        public float getSea_level() { return sea_level; }
+        public float getGrnd_level() { return grnd_level; }
     }
 
     public class Wind{
@@ -101,44 +68,29 @@ public class WeatherData {
         float deg;
 
         public Wind(){}
-
-        public float getSpeed() {
-            return speed;
-        }
-
-        public float getDeg() {
-            return deg;
-        }
+        public float getSpeed() { return speed; }
+        public float getDeg() { return deg; }
     }
 
     private class Clouds {
         float all;
 
         public Clouds(){}
-
-        public float getAll() {
-            return all;
-        }
+        public float getAll() { return all; }
     }
 
     public class Rain{
         float _3h;
 
         public Rain(){}
-
-        public float get_3h() {
-            return _3h;
-        }
+        public float get_3h() { return _3h; }
     }
 
     public class Snow{
         float _3h;
 
         public Snow(){}
-
-        public float get_3h() {
-            return _3h;
-        }
+        public float get_3h() { return _3h; }
     }
 
     public class Sys{
@@ -150,30 +102,12 @@ public class WeatherData {
         double sunset;
 
         public Sys(){}
-
-        public int getType() {
-            return type;
-        }
-
-        public int getId() {
-            return id;
-        }
-
-        public float getMessage() {
-            return message;
-        }
-
-        public String getCountry() {
-            return country;
-        }
-
-        public double getSunrise() {
-            return sunrise;
-        }
-
-        public double getSunset() {
-            return sunset;
-        }
+        public int getType() { return type; }
+        public int getId() { return id; }
+        public float getMessage() { return message; }
+        public String getCountry() { return country; }
+        public double getSunrise() { return sunrise; }
+        public double getSunset() { return sunset; }
     }
 
     private int id;
@@ -181,60 +115,19 @@ public class WeatherData {
     float cod;
 
     public WeatherData(){}
-
-    public Coord getCoord() {
-        return coord;
-    }
-
-    public Weather getWeather() {
-        return weather;
-    }
-
-    public String getBase() {
-        return base;
-    }
-
-    public Main getMain() {
-        return main;
-    }
-
-    public float getVisibilty() {
-        return visibilty;
-    }
-
-    public Wind getWind() {
-        return wind;
-    }
-
-    public Clouds getClouds() {
-        return clouds;
-    }
-
-    public Rain getRain() {
-        return rain;
-    }
-
-    public Snow getSnow() {
-        return snow;
-    }
-
-    public double getDt() {
-        return dt;
-    }
-
-    public Sys getSys() {
-        return sys;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public float getCod() {
-        return cod;
-    }
+    public Coord getCoord() { return coord; }
+//    public List<Weather> getWeather() { return weather; }
+    public Weather getWeather() { return weather; }
+    public String getBase() { return base; }
+    public Main getMain() { return main; }
+    public float getVisibilty() { return visibilty; }
+    public Wind getWind() { return wind; }
+    public Clouds getClouds() { return clouds; }
+    public Rain getRain() { return rain; }
+    public Snow getSnow() { return snow; }
+    public double getDt() { return dt; }
+    public Sys getSys() { return sys; }
+    public int getId() { return id; }
+    public String getName() { return name; }
+    public float getCod() { return cod; }
 }

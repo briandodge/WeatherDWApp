@@ -14,19 +14,22 @@ import javax.ws.rs.core.Response;
 public class WeatherResource {
 
 
-    @GET
-    @Path("/")
-    public Response getWeather(){
+    private final String location;
+    private final String apiKey;
 
-        OpenWeatherClient client = new OpenWeatherClient();
-        WeatherData result = client.getWeatherData();
-
-
-
-        return Response.ok(result).build();
+    public WeatherResource(String location, String apikey){
+        this.location = location;
+        this.apiKey = apikey;
     }
 
-
-
-
+    @GET
+    public Response getWeather(){
+        OpenWeatherClient client = new OpenWeatherClient(location, apiKey);
+        WeatherData result = client.getWeatherData();
+        if(result != null) {
+            return Response.ok(result).build();
+        } else {
+            return Response.noContent().build();
+        }
+    }
 }
