@@ -15,6 +15,10 @@ import java.net.URI;
 
 public class OpenWeatherClient {
 
+
+
+
+
     private WebTarget target;
 
 
@@ -36,6 +40,7 @@ public class OpenWeatherClient {
 
         try {
             weatherData = mapper.readValue(response, WeatherData.class);
+            System.out.println(weatherData.getCoord().getLat());
         } catch (IOException e) {
             e.printStackTrace();
         }

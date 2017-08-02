@@ -13,6 +13,7 @@ public class App extends Application<WeatherConfig> {
 
 
 
+
     @Override
     public void run(WeatherConfig config, Environment env) throws Exception {
         env.jersey().register(new WeatherResource());
